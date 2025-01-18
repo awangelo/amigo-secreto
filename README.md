@@ -1,6 +1,6 @@
 # Amigo Secreto
 
-https://github.com/user-attachments/assets/2ae504c0-b236-4941-b557-cefe329d7e80
+https://github.com/user-attachments/assets/f2ed1da9-3a41-4bfc-9f76-a777b250172f
 
 Este projeto é uma aplicação web simples para organizar um Amigo Secreto. Os usuários podem:
 
