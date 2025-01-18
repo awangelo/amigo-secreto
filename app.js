@@ -21,20 +21,20 @@ function sortearAmigo() {
         return;
     }
 
-    let sorteado = nomeAmigos[Math.floor(Math.random() * nomeAmigos.length)];
+    let sorteadoIndex = Math.floor(Math.random() * nomeAmigos.length);
+    let sorteado = nomeAmigos[sorteadoIndex];
+    nomeAmigos.splice(sorteadoIndex, 1); // Remove o amigo sorteado da lista
     nroSorteios++;
 
     let resultadoElement = document.getElementById("resultado");
     let sorteadoItem = document.createElement("li");
     sorteadoItem.classList.add("sorteado");
-    sorteadoItem.textContent = `Sorteio ${nroSorteios}: ${sorteado}`;
+    sorteadoItem.textContent = `${nroSorteios}: ${sorteado}`;
     resultadoElement.append(sorteadoItem);
-    
-    nomeAmigos = []; // Nao permitir mais sorteios com nomes repetidos
 
-    setTimeout(() => {
-        document.getElementById("listaAmigos").innerHTML = "";
-    }, 800);
+    // Remover o amigo sorteado
+    let listaAmigosElement = document.getElementById("listaAmigos");
+    listaAmigosElement.innerHTML = nomeAmigos.join("<br>");
 }
 
 function reiniciar() {
